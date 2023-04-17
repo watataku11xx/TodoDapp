@@ -4,18 +4,17 @@ import "hardhat/console.sol";
 
 contract Todo{
 
-  int public number;
+  int private number;
 
   constructor(int _number){
     number = _number;
   }
 
-  function referenceNumber() view private returns (int){
-    console.log("good, morning");
+  function referenceNumber() view public returns (int){
     return number;
   }
 
-  function referenceNumber2() view private{
+  function referenceNumber2() view public{
     console.log("good, morning2");
   }
 }
