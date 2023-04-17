@@ -8,5 +8,11 @@ describe('Todo', function() {
     await todo.deployed();
 
     expect(await todo.referenceNumber()).to.equal(1);
+
+    const setNumber = await todo.setNumber(2);
+
+    await setNumber.wait();
+
+    expect(await todo.referenceNumber()).to.equal(2);
   });
 });

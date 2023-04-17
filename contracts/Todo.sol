@@ -13,8 +13,8 @@ contract Todo{
   function referenceNumber() view public returns (int){
     return number;
   }
-
-  function referenceNumber2() view public{
-    console.log("good, morning2");
+  
+  function setNumber(int _number) public{
+    number = _number;
   }
 }
